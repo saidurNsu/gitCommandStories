@@ -1,0 +1,10 @@
+Key gen:
+S1: Run Cmd with Admin. permission
+S2: ssh-keygen
+S3: press enter without giving any info
+S4: Go to the corresponding folder and copy id_rsa.pub
+S5: Put your copied public key in gerrit: Settings > SSH keys > New SSH Key
+add gerrit hooks:
+S6: Go to project root folder and run:
+scp -p -P 29418 mailto:saidur.rahman@review2.bjitgroup.com:hooks/commit-msg .git/hooks/
+scp -p -P 29418 saidur.rahman@review2.bjitgroup.com:hooks/commit-msg .git/hooks/
